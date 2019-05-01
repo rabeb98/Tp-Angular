@@ -11,6 +11,7 @@ import { UserService } from '../_services';
 })
 export class DashboardComponent implements OnInit {
 
+  id = 0;
   currentUser: User;
   users: User[] = [];
 
@@ -24,7 +25,7 @@ export class DashboardComponent implements OnInit {
 
   deleteUser(id: number) {
     this.userService.delete(id).pipe(first()).subscribe(() => {
-      this.loadAllUsers()
+      this.loadAllUsers();
     });
   }
 
@@ -32,5 +33,8 @@ export class DashboardComponent implements OnInit {
     this.userService.getAll().pipe(first()).subscribe(users => {
       this.users = users;
     });
+  }
+  show(id) {
+    this.id = id;
   }
 }

@@ -24,6 +24,9 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { OpeninghoursComponent } from './openinghours/openinghours.component';
+import { LocalisationComponent } from './localisation/localisation.component';
+import { ContactinfoComponent } from './contactinfo/contactinfo.component';
 
 @NgModule({
     imports: [
@@ -68,7 +71,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
         AppointmentComponent,
         AboutComponent,
         LoadersComponent,
-        DashboardComponent
+        DashboardComponent,
+        OpeninghoursComponent,
+        LocalisationComponent,
+        ContactinfoComponent
 
     ],
     providers: [

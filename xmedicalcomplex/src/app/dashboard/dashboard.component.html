@@ -4,18 +4,45 @@
     <div class="row">
       <div class="col-12">
         <div class="container">
-          <div class="card card-container">
+          <div class="card card-container1">
+          <h2 style="color: #004085">Hello {{currentUser.firstName}}!</h2>
+          <p>You can manage everything from here !!!</p>
+          <table>
+          <ul style="list-style-type:none" class="card ">
+            <li>
+              <span><button class="test" (click)="show(1)"> Opening Hours </button></span>
+            </li>
+            <li>
+              <span><button class="test" (click)="show(2)"> Localisation </button></span>
+            </li>
+            <li>
+              <span><button class="test" (click)="show(3)"> Descriptions </button></span>
+            </li>
+            <li>
+              <span ><button class="test"(click)="show(4)"> Departments </button></span>
+            </li>
+            <li>
+              <span><button class="test" (click)="show(5)"> Contact Info </button></span>
+            </li>
+          </ul>
+          </table>
+        </div>
+        <div class="card card-container2">
+          <br>
+          <ul style="list-style-type:none" *ngIf="id==0">
+            <h3>Lately registered users:</h3>
+            <li *ngFor="let user of users" >
+              <div *ngIf="user.username!=='admin' " >
+                {{user.username}} ({{user.firstName}} {{user.lastName}})
+                - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+              </div>
+            </li>
+          </ul>
+          <app-openinghours *ngIf="id==1"></app-openinghours>
+          <app-localisation *ngIf="id==2"></app-localisation>
+          <app-contactinfo *ngIf="id==5"></app-contactinfo>
 
-          <h1>Hi {{currentUser.firstName}}!</h1>
-<p>You can manage everything from here !!!</p>
-<h3>All registered users:</h3>
-<ul>
-  <li *ngFor="let user of users" >
-    <div *ngIf="user.username!=='admin' " >
-    {{user.username}} ({{user.firstName}} {{user.lastName}})
-    - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-    </div>
-  </li>
-</ul>
-<p><a [routerLink]="['/login']">Logout</a></p>
-          </div></div></div></div></div></header></body>
+          <div class="test test1">
+            <span id="log" [routerLink]="['/login']">Logout</span>
+          </div></div>
+        </div></div></div></div></header></body>
