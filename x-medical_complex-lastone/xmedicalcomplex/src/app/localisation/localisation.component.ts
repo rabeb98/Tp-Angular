@@ -39,16 +39,6 @@ export class LocalisationComponent implements OnInit {
 
   }
 
-  submit(form){
-    console.log(form.value);
-    console.log(form.controls['locali'].value );
-    alert("The new changes are submitted");
-    localStorage.setItem('locali',form.controls['locali'].value) ;
-    form.reset();
-  }
-  locali(form){
 
-    return form.controls['locali'].value ;
-  }
 
 }

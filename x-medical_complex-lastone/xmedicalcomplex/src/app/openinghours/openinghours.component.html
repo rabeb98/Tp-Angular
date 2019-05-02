@@ -1,14 +1,21 @@
-
-        <div class="opening-hours">
-          <h2 class="d-flex align-items-center">Opening Hours</h2>
-
-          <ul class="p-0 m-0">
-            <li>Monday - Thursday <span><input type="time">  - <input type="time"> </span></li>
-            <li>Friday <span><input type="time"> - <input type="time"> </span></li>
-            <li>Saturday <span><input type="time">  - <input type="time"> </span></li>
-            <li>Sunday <span><input type="time">  - <input type="time"> </span></li>
-          </ul>
-          <input class="test2" type="button"  onclick="test2()" value="Apply Changes">
-          <br><br><br><br><br>
-        </div>
-
+<div class="opening-hours">
+  <h2 class="d-flex align-items-center">Opening Hours</h2>
+<form class=form-group #monForm=ngForm (ngSubmit)=updateOpeninghour()>
+  <ul class="p-0 m-0">
+    <li>Monday - Thursday <span><input type="time" name=start1 [(ngModel)]=openinghour._start1 class=
+            form-control required #nameField="ngModel" >  - <input type="time" name=end1 [(ngModel)]=openinghour._end1 class=
+            form-control required #nameField="ngModel"> </span></li>
+    <li>Friday <span><input type="time" name=start2 [(ngModel)]=openinghour._start2 class=
+            form-control required #nameField="ngModel">  - <input type="time" name=end2 [(ngModel)]=openinghour._end2 class=
+            form-control required #nameField="ngModel"></span></li>
+    <li>Saturday <span><input type="time" name=start3 [(ngModel)]=openinghour._start3 class=
+            form-control required #nameField="ngModel">  - <input type="time" name=end3 [(ngModel)]=openinghour._end3 class=
+            form-control required #nameField="ngModel"></span></li>
+    <li>Sunday <span><input type="time" name=start4 [(ngModel)]=openinghour._start4 class=
+            form-control required #nameField="ngModel">  - <input type="time" name=end4 [(ngModel)]=openinghour._end4 class=
+            form-control required #nameField="ngModel"></span></li>
+  </ul>
+  <input class="btn btn-primary btn-block" type="submit" value="Apply Changes">
+</form>
+  <br><br><br><br><br>
+</div>

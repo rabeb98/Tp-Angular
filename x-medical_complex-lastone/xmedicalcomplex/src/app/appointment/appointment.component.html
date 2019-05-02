@@ -5,12 +5,16 @@
         <div class="opening-hours">
           <h2 class="d-flex align-items-center">Opening Hours</h2>
 
-          <ul class="p-0 m-0">
-            <li>Monday - Thursday <span>8.00 - 19.00</span></li>
-            <li>Friday <span>8.00 - 18.30</span></li>
-            <li>Saturday <span>9.30 - 17.00</span></li>
-            <li>Sunday <span>9.30 - 15.00</span></li>
-          </ul>
+
+
+            <ul class="p-0 m-0"*ngFor="let elt of openinghours" >
+
+            <li *ngIf="elt._start1 !==''">Monday - Thursday <span>{{elt._start1}} - {{elt._end1}}</span></li>
+            <li *ngIf="elt._start1 !==''">Friday <span>{{elt._start2}} - {{elt._end2}}</span></li>
+            <li *ngIf="elt._start1 !==''">Saturday <span>{{elt._start3}} - {{elt._end3}}</span></li>
+            <li *ngIf="elt._start1 !==''">Sunday <span>{{elt._start4}} - {{elt._end4}}</span></li>
+            </ul>
+
 
         </div>
       </div>
