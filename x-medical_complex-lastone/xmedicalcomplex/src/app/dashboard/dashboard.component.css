@@ -1,0 +1,62 @@
+.test {
+  cursor: pointer;
+  position: center;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 2.6em;
+  width: 16em;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+.test.selected:hover , .test2.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+.test:hover , .test2:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.card-container1{
+  float: left;
+  height: 550px;
+}
+.card-container2{
+  float: right;
+  width: 650px;
+  height: 550px;
+}
+.test1{
+  float: left;
+  width: 60px;
+}
+
+#log{
+  width: 60px;
+}
+#change{
+  width: 100px;
+  text-decoration: none;
+  border: none;
+}
+
+.test2 {
+  cursor: pointer;
+  position: center;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 2.6em;
+  width: 130px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}

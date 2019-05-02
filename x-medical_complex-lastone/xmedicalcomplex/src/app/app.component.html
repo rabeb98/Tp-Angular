@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <title>X Medical Complex</title>
+
+</head>
+<body>
+<header class="site-header">
+    <div class="nav-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+
+
+                    <nav class="site-navigation d-flex justify-content-end align-items-center">
+                        <div class="site-branding d-flex align-items-center">
+                            <a class="d-block" href="index.html" rel="home"><img class="d-block" src="../assets/images/logo.png" alt="logo"></a>
+                        </div><!-- .site-branding -->
+                        <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-center">
+                            <li class="current-menu-item"><a routerLink="/home">Home</a></li>
+                            <li><a routerLink="/about">About us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li class="search-widget">
+                                <form class="flex flex-wrap align-items-center">
+                                    <input type="search" placeholder="Search...">
+                                    <button type="submit"  class="flex justify-content-center align-items-center">Search</button>
+                                </form><!-- .flex -->
+                            </li><!-- .search-widget -->
+
+                            <img    style="max-width: 5%" src="../assets/images/user.png">
+                            <a class="classi" routerLink="/login">SIGN UP</a>
+                        </ul>
+                    </nav><!-- .site-navigation -->
+
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .nav-bar -->
+    <router-outlet></router-outlet>
+    <app-newsletter></app-newsletter>
+</header><!-- .site-header -->
+
+<footer class="site-footer">
+    <div class="footer-widgets">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="foot-about">
+                        <h2><a href="#"><img src="../assets/images/logo.png" alt=""></a></h2>
+
+                        <p> The complex was established to serve those in need and provide medical services at affordable prices to all, through which medical services are provided with dedication to all patients from all walks of life.</p>
+
+
+                    </div><!-- .foot-about -->
+                </div><!-- .col -->
+
+                <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                    <div class="foot-contact">
+                        <h2>Contact</h2>
+
+                        <ul class="p-0 m-0">
+                            <li><span>Addtress:</span>Tunisia Tunis</li>
+                            <li><span>Phone:</span>+216 00 000 000</li>
+                            <li><span>Email:</span>yourmail@gmail.com</li>
+                        </ul>
+                    </div>
+                </div><!-- .col -->
+
+                <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                    <div class="foot-links">
+                        <h2>Usefull Links</h2>
+
+                        <ul class="p-0 m-0">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="#">Departments</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="news.html">FAQ</a></li>
+                            <li><a href="services.html">Testimonials</a></li>
+                        </ul>
+                    </div><!-- .foot-links -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .footer-widgets -->
+</footer><!-- .site-footer -->
+</body>
+</html>
