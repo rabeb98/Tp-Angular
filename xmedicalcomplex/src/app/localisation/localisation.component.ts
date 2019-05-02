@@ -1,5 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  ,ViewEncapsulation, ViewChild, ElementRef, PipeTransform, Pipe} from '@angular/core';
+import { LocalisationService } from '../_services';
+import { Localisation } from '../_models';
+import { DomSanitizer } from "@angular/platform-browser";
 
+@Pipe({ name: 'safe' })
+export class SafePipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer) { }
+  transform(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+}
 @Component({
   selector: 'app-localisation',
   templateUrl: './localisation.component.html',
@@ -7,9 +17,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocalisationComponent implements OnInit {
 
-  constructor() { }
+  localisation:Localisation = new Localisation ();
+  localisations: Array<Localisation> = new Array<Localisation>();
+  constructor(private localisationService:LocalisationService) {
+    this.localisationService.getAll().subscribe(res =>
+    {
+      this.localisations = res;
+    });
+  }
 
   ngOnInit() {
+
+  }
+  updateLocalisation(){this.localisationService.add(this.localisation).subscribe(res =>
+      console.log(res)
+  );
+    this.localisationService.getAll().subscribe(result =>
+    {
+      this.localisations = result;
+    });
+
+  }
+
+  submit(form){
+    console.log(form.value);
+    console.log(form.controls['locali'].value );
+    alert("The new changes are submitted");
+    localStorage.setItem('locali',form.controls['locali'].value) ;
+    form.reset();
+  }
+  locali(form){
+
+    return form.controls['locali'].value ;
   }
 
 }
