@@ -11343,4 +11343,31 @@ a{
 .forgot-password:focus{
     color: rgb(12, 97, 33);
 }
+.classi {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-transform:uppercase;
+    font-size:14px;
+    color:rgb(104, 145, 162);
+
+    font-weight:bold;
+
+    text-shadow:rgb(104, 145, 162) 0 -1.25px 0;
+
+    /** Button Style **/
+    display:inline-block;
+    zoom:1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    padding:11px 20px;
+
+    -webkit-box-shadow:rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
+    -moz-box-shadow:rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
+    box-shadow:rgba(255, 255, 255, 0.3) 0 1px 0, inset rgba(255, 255, 255, 0.3) 0 1px 0;
+
+
+/** Active State Style **/
+
+}
+
 

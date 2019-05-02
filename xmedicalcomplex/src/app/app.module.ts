@@ -4,7 +4,6 @@ import { ReactiveFormsModule }    from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-// used to create fake backend
 import { fakeBackendProvider } from './_helpers';
 import { DepartmentsComponent } from './departments/departments.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
@@ -25,7 +24,7 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { OpeninghoursComponent } from './openinghours/openinghours.component';
-import { LocalisationComponent } from './localisation/localisation.component';
+import { LocalisationComponent, SafePipe } from './localisation/localisation.component';
 import { ContactinfoComponent } from './contactinfo/contactinfo.component';
 
 @NgModule({
@@ -74,7 +73,8 @@ import { ContactinfoComponent } from './contactinfo/contactinfo.component';
         DashboardComponent,
         OpeninghoursComponent,
         LocalisationComponent,
-        ContactinfoComponent
+        ContactinfoComponent,
+        SafePipe
 
     ],
     providers: [
