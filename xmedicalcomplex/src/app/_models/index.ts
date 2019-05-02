@@ -1,3 +1,3 @@
 export * from './user';
-export * from './date';
 export * from './localisation';
+export * from './openinghour';
