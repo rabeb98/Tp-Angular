@@ -1,0 +1,8 @@
+
+<select (change)="select()" [ngClass]="{police:isC,taille:isT,couleur:isC}" [(ngModel)]="theme">
+  <option value="color">color</option>
+  <option value="size">font-size</option>
+  <option value="police">font-police</option>
+</select>
+{{theme}}
+{{isC}}

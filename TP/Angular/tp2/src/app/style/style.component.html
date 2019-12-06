@@ -1,0 +1,16 @@
+<p [ngStyle]="{
+  'color': c,
+  'font-family' : f,
+  'font-size': s + 'px'
+}">
+  Test NG Style
+</p>
+<div>
+Couleur: <input  [(ngModel)]="c" type="text" >
+Taille: <input  [(ngModel)]="s" type="number" >
+</div>
+<select [(ngModel)]="f">
+  <option value="Garamond">Garamond</option>
+  <option value="Arial">Arial</option>
+  <option value="Verdana">Verdana</option>
+</select>
